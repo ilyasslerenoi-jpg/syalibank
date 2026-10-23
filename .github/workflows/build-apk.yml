@@ -26,18 +26,15 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies
-      run: npm install
-
-    - name: Install Capacitor & Android Platform
-      run: |
-        npm install @capacitor/core @capacitor/cli @capacitor/android
-        npx cap init "NextGenBanking" "com.syalii.nextgenbanking" --web-dir dist
+      run: npm install --legacy-peer-deps
 
     - name: Build Web Assets
       run: npm run build
 
-    - name: Add Capacitor Android Platform
+    - name: Install Capacitor & Add Android
       run: |
+        npm install --legacy-peer-deps @capacitor/core @capacitor/cli @capacitor/android
+        npx @capacitor/cli init NextGenBanking com.syalii.nextgenbanking --web-dir dist --yes
         npx cap add android
         npx cap sync
 
