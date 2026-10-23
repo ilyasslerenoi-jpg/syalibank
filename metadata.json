@@ -1,0 +1,8 @@
+{
+  "name": "Syalii — Next-Gen Banking",
+  "description": "Application bancaire mobile élégante et fluide inspirée d'iOS avec cartes interactives 3D, virements instantanés et gestion multi-devises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
